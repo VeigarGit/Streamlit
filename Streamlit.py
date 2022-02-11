@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+df1 = st.file_uploader("Escolha um arquivo:", type="xlsx")
 
-xls = pd.ExcelFile(r'https://github.com/VeigarGit/Streamlit/blob/main/Somatoria.xlsx')
-df1 = pd.read_excel(xls)
 print (df1)
 
 
