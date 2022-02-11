@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-xls = pd.ExcelFile('Somatoria.xlsx')
+xls = pd.ExcelFile(r'https://github.com/VeigarGit/Streamlit/blob/2f470b6a954fed676cec9d02c2b4afafc30c60bc/Somatoria.xlsx')
 df1 = pd.read_excel(xls, 'Plan1')
 df2 = pd.DataFrame.to_excel(xls, 'Plan2')
 print (df1)
