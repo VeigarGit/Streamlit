@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from gsheetsdb import connect
+import connect from gsheetsdb 
 
 st.title("My First Streamlit Web App")
 
