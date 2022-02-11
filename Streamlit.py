@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-xls = pd.ExcelFile('Somatoria.xlsx')
-df1 = pd.read_excel(xls)
+df1 = st.file_uploader("Escolha um arquivo:", type="xlsx")
+
 print (df1)
+
 
 
 df1.head()
