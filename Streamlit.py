@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
+import numpy as np 
+
 public_gsheets_url = "https://docs.google.com/spreadsheets/d/xxxxxxx/edit#gid=0"
+
 # streamlit_app.py
 
 import streamlit as st
-from gsheetsdb import connect
 
 # Create a connection object.
 conn = connect()
