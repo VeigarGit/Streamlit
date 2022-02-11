@@ -1,14 +1,25 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+public_gsheets_url = "https://docs.google.com/spreadsheets/d/xxxxxxx/edit#gid=0"
+# streamlit_app.py
 
-xls = pd.ExcelFile(r'https://docs.google.com/spreadsheets/d/11-inHHG35pbGF3WyDZPBMPRcXVQoEGfkFt5RhxbBLQM/edit?usp=sharing')
-df1 = pd.read_excel(xls, 'Página1')
-df2 = pd.DataFrame.to_excel(xls, 'Página2')
-print (df1)
-print (df2)
+import streamlit as st
+from gsheetsdb import connect
 
-df1.head()
-df1list = ['Coluna1','Coluna2']
-df1['results'] = df1[list].sum(axis=1)
-print(df1)
+# Create a connection object.
+conn = connect()
+
+# Perform SQL query on the Google Sheet.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+@st.cache(ttl=600)
+def run_query(query):
+    rows = conn.execute(query, headers=1)
+    return rows
+
+sheet_url = st.secrets["public_gsheets_url"]
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
+
+# Print results.
+for row in rows:
+    st.write(f"{row.name} has a :{row.pet}:")
