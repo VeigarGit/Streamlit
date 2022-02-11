@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Connect to Google Sheets")
-x = "https://docs.google.com/spreadsheets/d/11-inHHG35pbGF3WyDZPBMPRcXVQoEGfkFt5RhxbBLQM/edit?usp=sharing"
-conn = connect()
-rows = conn.execute(f'SELECT * FROM "{gsheet_url}"')
-df_gsheet = pd.DataFrame(rows)
-st.write(x)
+st.write("My First Streamlit Web App")
+
+df = pd.DataFrame({"one": [1, 2, 3], "two": [4, 5, 6], "three": [7, 8, 9]})
+st.write(df)
