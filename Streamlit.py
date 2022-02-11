@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-xls = pd.ExcelFile(r'https://github.com/VeigarGit/Streamlit/blob/2f470b6a954fed676cec9d02c2b4afafc30c60bc/Somatoria.xlsx')
-df1 = pd.read_excel(xls, 'Plan1')
-df2 = pd.DataFrame.to_excel(xls, 'Plan2')
+xls = pd.ExcelFile(r'https://docs.google.com/spreadsheets/d/11-inHHG35pbGF3WyDZPBMPRcXVQoEGfkFt5RhxbBLQM/edit?usp=sharing')
+df1 = pd.read_excel(xls, 'Página1')
+df2 = pd.DataFrame.to_excel(xls, 'Página2')
 print (df1)
 print (df2)
 
