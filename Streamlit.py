@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import openpyxl
 lista_soma = list()
 arquivo = st.file_uploader("Escolha um arquivo:", type="xlsx")
 
