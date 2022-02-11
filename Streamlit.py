@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-df1 = pd.read_execel(r'Somatoria.xlsx')
+df1 = pd.read_excel(r'Somatoria.xlsx')
 
 print (df1)
 
