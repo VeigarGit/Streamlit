@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-df1 = pd.read_excel(r'Somatoria.xlsx')
-
+xls = pd.ExcelFile(r'C:\Users\Rafael\Desktop\python\Streamlit\Streamlit\Streamlit\Somatoria.xlsx')
+df1 = pd.read_excel(xls)
 print (df1)
 
 
